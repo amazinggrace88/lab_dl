@@ -1,6 +1,5 @@
 import numpy as np
-
-from ch03.ex01 import sigmoid
+from lab_dl.ch03.ex01 import sigmoid
 
 
 def init_network():
@@ -65,7 +64,7 @@ def identity_function(x):
 def softmax(x):
     """[x1, x2, ..., x_k, ..., x_n]일 때,
     y_k = exp(x_k) / [sum i to n exp(x_i)]
-    softmnax 함수의 리턴 값은 0 ~ 1의 값이 되고, 모든 리턴 값의 총합은 1이 됨.
+    softmax 함수의 리턴 값은 0 ~ 1의 값이 되고, 모든 리턴 값의 총합은 1이 됨.
     이런 특징 때문에, softmax 함수의 출력값은 확률로 해석될 수 있다.
     """
     # return np.exp(x) / np.sum(np.exp(x))

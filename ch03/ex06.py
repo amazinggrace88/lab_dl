@@ -8,7 +8,7 @@ import numpy as np
 
 def img_show(img_arr):
     """Numpy 배열(ndarray)로 작성된 이미지를 화면 출력"""
-    img = Image.fromarray(np.uint8(img_arr))  # numpy 배열 형식을 이미지 객체로 변환(array에서 image 만들어준다)
+    img = Image.fromarray(np.uint8(img_arr))  # numpy 배열 형식을 이미지 객체로 변환(array 에서 image 만들어준다)
     # uint8() : 8 bits 를 부호가 없는 숫자로 즉, 0~256(2^8)-1 범위로 주어라
     #           8 bits 를 부호를 가지는 숫자면 -128~127(-2^7~2^7-1) 범위가 된다. 이를 피하기 위함
     img.show()
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     (X_train, y_train), (X_test, y_test) = load_mnist(normalize=True, flatten=False, one_hot_label=True)
     
     print('X_train shape : ', X_train.shape)
-    # (60000, 1흑백, 28, 28)  : flatten=False 이기 때문에 784 -> 28 * 28 로 변환하였다. (형태 reshape으로 바꿀 필요가 없다)
+    # (60000, 1흑백, 28, 28)  : flatten=False 이기 때문에 784 -> 28 * 28 로 변환하였다. (형태 reshape 으로 바꿀 필요가 없다)
     # flatten = False 인 경우 이미지 구성을 (컬러, 가로, 세로) 형식으로 표시함
     # (신경망 넣을때는 입력값으로 펼쳐놓고 flatten true 로 들어가는게 낫다)
     
