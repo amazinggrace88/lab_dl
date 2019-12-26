@@ -17,3 +17,10 @@ E = np.array([1, 2, 3])
 print('sample array1 : \n', E.reshape((3, 1)))
 print(E.shape)
 
+
+def step_function(x):
+    result = [1 if x_i > 0 else 0
+              for x_i in x]
+    return result
+
+
