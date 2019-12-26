@@ -68,8 +68,8 @@ def softmax(x):
     이런 특징 때문에, softmax 함수의 출력값은 확률로 해석될 수 있다.
     """
     # return np.exp(x) / np.sum(np.exp(x))
-    max_x = np.max(x)  # 배열 x의 원소들 중 최대값을 찾음
-    y = np.exp(x - max_x) / np.sum(np.exp(x - max_x))
+    max_x = np.max(x)  # 배열 x의 원소들 중 최대값을 찾음(스칼라)
+    y = np.exp(x - max_x) / np.sum(np.exp(x - max_x))  # x - m = [1, 2, 3] - [3, 3, 3] 이 된다. (스칼라가 배열이 됨) (broadcast)
     return y
 
 
@@ -89,10 +89,12 @@ if __name__ == '__main__':
     print('x =', x)
     print('softmax =', softmax(x))
 
-    x = [1, 2, 3]
-    print('softmax =', softmax(x))
 
-    x = [1e0, 1e1, 1e2, 1e3]  # [1, 10, 100, 1000]
-    print('x =', x)
-    print('softmax =', softmax(x))
+
+
+
+
+
+
+
 
