@@ -2,11 +2,9 @@
 mini-batch
 """
 import numpy as np
-
-from lab_dl.ch03.ex01 import sigmoid
-from lab_dl.ch03.ex05 import init_network
-from lab_dl.ch03.ex08 import forword, predict
-from lab_dl.dataset.mnist import load_mnist
+from ch03.ex01 import sigmoid
+from ch03.ex08 import init_network, accuracy
+from dataset.mnist import load_mnist
 
 
 def softmax(X):
@@ -42,7 +40,7 @@ def softmax(X):
 
 def forword(network, x):
     """
-    :param x: image 한 개 정보를 가지고 있는 배열 (784, ) image 1장 즉, size만 있고 1차원
+    :param x: image 한 개 정보를 가지고 있는 배열 (784, ) image 1장 즉, size 만 있고 1차원
     """
     # 가중치 행렬:
     W1, W2, W3 = network['W1'], network['W2'], network['W3']
@@ -69,7 +67,7 @@ def predict(network, X_test):
     return np.array(prediction)
 
 
-def mini_batch(network, X_test, batch_size):
+def mini_batch(network, X_test, batch_size):  # my answer before I arrived home
     """
     :param network: set 되어 있는 신경망
     :param X_test: 테스트 데이터
@@ -86,6 +84,19 @@ def mini_batch(network, X_test, batch_size):
     result[i] = result_element[i]
     return result
 
+
+def mini_batch(network, X_test, batch_size):  # other student's answer
+
+    r = np.zeros(0)
+    print(r)
+
+    for i in range(0, len(X_test), batch_size):
+        X_batch = X_test[i:i + batch_size]
+        X_batch_pred = predict(network, X_batch)
+        r = np.r_[r, X_batch_pred]  # row binding
+        print(r)
+
+    return r
 
 
 if __name__ == '__main__':
@@ -116,3 +127,4 @@ if __name__ == '__main__':
     # softmax 이용하기~!
     
     # 정확도 계산하여 출력
+    print('Accuracy : \n', accuracy(y_test, y_pred))

@@ -1,5 +1,5 @@
 import numpy as np
-from lab_dl.ch03.ex01 import sigmoid
+from ch03.ex01 import sigmoid
 
 
 def init_network():

@@ -3,10 +3,11 @@ MINIST 숫자 손글씨 데이터 신경망 구현
 """
 import pickle
 import numpy as np
-from lab_dl.ch03.ex01 import sigmoid
-from lab_dl.ch03.ex05 import identity_function, softmax
-from lab_dl.dataset.mnist import load_mnist
 from PIL import Image
+
+from ch03.ex01 import sigmoid
+from ch03.ex05 import softmax
+from dataset.mnist import load_mnist
 
 
 def init_network():
