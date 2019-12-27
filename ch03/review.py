@@ -14,7 +14,7 @@ def init_network():
     print(network.keys())  # keys 확인
     return network
 
-def forword(network, X_test, batch_size):
+def forword(network, X_test, batch_size):  # 이렇게까지는 필요 없다고 생각~
     # 가중치
     W1, W2, W3 = network['W1'], network['W2'], network['W3']
     # 편향

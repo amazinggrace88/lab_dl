@@ -2,7 +2,7 @@
 MNIST 숫자 손글씨 데이터 세트
 """
 from PIL import Image
-from lab_dl.dataset.mnist import load_mnist
+from dataset.mnist import load_mnist
 import numpy as np
 
 
