@@ -4,9 +4,9 @@ mini-batch
 import pickle
 
 import numpy as np
-from ch03.ex01 import sigmoid
-from ch03.ex08 import init_network, accuracy
-from dataset.mnist import load_mnist
+from lab_dl.ch03.ex01 import sigmoid
+from lab_dl.ch03.ex08 import init_network, accuracy
+from lab_dl.dataset.mnist import load_mnist
 
 
 def softmax(X):
@@ -40,7 +40,7 @@ def softmax(X):
     return y
 
 
-def forword2(network, x):
+def forward2(network, x):
     """
     :param x: 2차원이라고 가정
     """
@@ -62,7 +62,7 @@ def predict2(network, X_test):
     prediction = []
     for x_i in X_test:
         # 각 이미지를 신경망에 전파(통과)시켜 확률을 계산하는 과정 반복
-        y_hat = forword2(network, x_i)
+        y_hat = forward2(network, x_i)
         # 가장 큰 확률의 index(예측값) 를 준다
         y_pred = np.argmax(y_hat)
         prediction.append(y_pred)
@@ -79,9 +79,9 @@ def mini_batch(network, X_test, batch_size):  # my answer before I arrived home 
     for i in range(0, len(X_test), batch_size):
         # batch
         x_batch = X_test[i:(i+batch_size)]
-        y_batch = forword2(network, x_batch)  # x_batch 를 X_test 로 주는 데 forword()를 써야대~ 그리고 축을 1로 주어야 해요!
+        y_batch = forward2(network, x_batch)  # x_batch 를 X_test 로 주는 데 forword()를 써야대~ 그리고 축을 1로 주어야 해요!
         p = np.argmax(y_batch, axis=1)  # row 축으로 argmax 뽑는다.
-        result = np.append(result, p)  #
+        result = np.append(result, p)  # result 에 np.append 임! (함수 ctrl + click 하여 확인하기)
     return result
 
 
@@ -104,7 +104,7 @@ def mini_batch(network, X, batch_size):  # 오쌤 정답 - X - X_test 인 거에
     # batch_size -> forward propagation
     for i in range(0, len(X), batch_size):
         x_batch = X_test[i:(i+batch_size)]
-        y_hat = forword2(network, x_batch)  # shape : (batch size, 10) 인 2차원 배열
+        y_hat = forward2(network, x_batch)  # shape : (batch size, 10) 인 2차원 배열
         # 각 row 에서의 최댓값의 인덱스 -> (batch_size, ) 의 1차원 배열
         predictions = np.argmax(y_hat, axis=1)  # np.array 로 출력되므로 y_pred 를 np.array([])로 만들었다
         y_pred = np.append(y_pred, predictions)

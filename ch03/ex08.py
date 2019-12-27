@@ -5,9 +5,9 @@ import pickle
 import numpy as np
 from PIL import Image
 
-from ch03.ex01 import sigmoid
-from ch03.ex05 import softmax
-from dataset.mnist import load_mnist
+from lab_dl.ch03.ex01 import sigmoid
+from lab_dl.ch03.ex05 import softmax
+from lab_dl.dataset.mnist import load_mnist
 
 
 def init_network():
