@@ -3,6 +3,7 @@
 """
 import numpy as np
 
+
 def numerical_diff(fn, x):
     """
     Numerical Differential 
@@ -44,13 +45,13 @@ def f4(x):
     return x[0] ** 2 + x[0] * x[1] + x[1] ** 2
 
 
-def numerical_gradient(fn, x):
+def _numerical_gradient(fn, x):
     """
     점 x 에서의 함수의 각 편미분(partial differential)들의 배열
     fn : fn(x0, x1, x2..)
     x : [x0, x1, ...] => n차원
     """
-    x = x.astype(np.float64)  # 실수타입으로만 생각 -> why? 계산 통일 위함
+    x = x.astype(np.float64, copy=False)  # 무조건 실수타입으로 넣는 것을 가정하자.
     gradient = np.zeros_like(x)  # = np.zeros(shape=x.shape) 원소 2개 짜리 array
     h = 1e-4  # 0.0001
     for i in range(x.size):  # 모든 원소의 갯수만큼 : x.size
@@ -64,6 +65,24 @@ def numerical_gradient(fn, x):
         gradient[i] = (fh1 - fh2) / (2*h)
         x[i] = ith_value  # x[i]번째를 원래 숫자로 되돌려놔야됨
     return gradient
+
+
+def numerical_gradient(fn, x):
+    """2 차원 용 numerical gradient !
+    x = [
+    [x11, x12, .. ]
+    [x21, x22. .. ]
+    ...            ]"""
+    print('in numerical gradient')
+    print('x = ', x)
+    if x.ndim == 1:
+        return _numerical_gradient(fn, x)
+    else:
+        grads = np.zeros_like(x)
+        for i, x_i in enumerate(x):  # enumerate i(인덱스 출력), x_i(인덱스에 있는 데이터 출력)
+            grads[i] = _numerical_gradient(fn, x_i)
+            print(f'grads[{i}] = {grads[i]}')
+        return grads
 
 
 if __name__ == '__main__':
@@ -81,17 +100,22 @@ if __name__ == '__main__':
     print('편미분2_x1을 변수, x0 상수: ', estimate_2)  # 7.9
 
     # 도함수들의 배열 만들기
-    gradient = numerical_gradient(f2, np.array([3.0, 4.0]))
+    gradient = _numerical_gradient(f2, np.array([3.0, 4.0]))
     print('gradient array result : ', gradient)
 
     # 실습
     # f3 = x0 + x1**2 + x2**3
     # 점 (1, 1, 1)에서의 각 편미분들의 값
     # df/dx0 = 1, df/dx1 = 2, df/dx2 = 3
-    gradient_f3 = numerical_gradient(f3, np.array([1, 1, 1]))
+    gradient_f3 = _numerical_gradient(f3, np.array([1, 1, 1]))
     print('gradient f3 array result : ', gradient_f3)
 
     # f4 = x0**2 + x0 * x1 + x1**2
     # 점 (1, 2)에서의 df/dx0 = 4, df/dx1 = 5
-    gradient_f4 = numerical_gradient(f4, np.array([1, 2]))
+    gradient_f4 = _numerical_gradient(f4, np.array([1, 2]))
     print('gradient f4 array result : ', gradient_f4)
+
+    # 복습
+    # gradient -> f(weight, bias) = Entropy 라는 함수의 기울기와 같다.
+    # 1) Entropy 의 점을 랜덤으로 잡는다 = weight 초기값(random 설정)
+    # 2) gradient 를 계산하여 음수 ->  weight 양의 방향으로 움직임, 양수 -> weight 음의 방향으로 움직이면 최솟값을 찾게 된다.

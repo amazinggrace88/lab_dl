@@ -19,7 +19,7 @@ import math
 즉, 함수의 최솟값을 찾는 문제 
 
 손실함수의 종류
-- 평균 제곱 오차 (MSE)
+- 평균 제곱 오차 (MSE) - 회귀문제(미래의 숫자(수치 데이터 1개)를 예측)
 - 교차 엔트로피 (Cross Entropy)
 """
 import numpy as np
