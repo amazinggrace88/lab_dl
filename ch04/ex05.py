@@ -73,15 +73,15 @@ def numerical_gradient(fn, x):
     [x11, x12, .. ]
     [x21, x22. .. ]
     ...            ]"""
-    print('in numerical gradient')
-    print('x = ', x)
+    # print('in numerical gradient')
+    # print('x = ', x)
     if x.ndim == 1:
         return _numerical_gradient(fn, x)
     else:
         grads = np.zeros_like(x)
         for i, x_i in enumerate(x):  # enumerate i(인덱스 출력), x_i(인덱스에 있는 데이터 출력)
             grads[i] = _numerical_gradient(fn, x_i)
-            print(f'grads[{i}] = {grads[i]}')
+            # print(f'grads[{i}] = {grads[i]}')
         return grads
 
 

@@ -70,12 +70,11 @@ if __name__ == '__main__':
     print()
 
     # for 문 안에서 100번 반복
+    lr = 0.1
     for i in range(100):
         g1 = network.gradient(x, y_true)  # 기울기
         # print('for : gradient decent 1 = \n', g1)
-        lr = 0.1
         network.W -= lr * g1
-        print('for : W = ', network.W)  # 바뀐 것을 볼 수 있음
-        # print('for : y_pred = ', network.predict(x))
-        # print('for : cross entropy after gd = ', network.loss(x, y_true))
+        # print('for : W = ', network.W)  # 바뀐 것을 볼 수 있음
+        print(f'for : y_pred = {network.predict(x)}', f'for t: cross entropy after gd = {network.loss(x, y_true)}')
 
