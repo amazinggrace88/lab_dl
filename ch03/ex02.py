@@ -32,8 +32,7 @@ print('A dot B : \n', A.dot(B))
 print('B dot A : \n', B.dot(A))  # 교환법칙이 성립하지 않음
 
 
-# 차원에 따른 ndarray.shape
-# (x, ), (x, y), (x, y, z)...
+# 차원에 따른 ndarray.shape : (x, ), (x, y), (x, y, z)... 1 차원, 2 차원, 3 차원 ..
 x = np.array([1, 2, 3])
 print(x)
 print(x.shape)

@@ -91,7 +91,7 @@ def accuracy(y_true, y_pred):
         p = np.argmax(y_pred[i])
         if p == y_true[i]:
             accuracy_cnt += 1
-    return accuracy_cnt / len(y_true)  # for 문보다 numpy 의 기능이 속도 훨씬 빠르다.
+    return accuracy_cnt / len(y_true)  # for 문보다 numpy 의 기능이 속도 훨씬 빠르다. --> for 문 이해 안됨.
 
 
 def accuracy(y_true, y_pred):
@@ -139,7 +139,7 @@ if __name__ == '__main__':
     acc = accuracy(y_test, y_pred)
     print('accuracy : ', acc)
 
-    # step 3. 개선
+    # step 4. 시각화
     # 예측이 틀린 첫번째 이미지 : X_test[8]
     # 문제점 : noralize(0~1) 되어 있고, 1차원 배열로 flatten 된 데이터~!
     img = X_test[8] * 255  # 0~1 -> 0~255 사이의 값으로 바꿈 (역정규화)

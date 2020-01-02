@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3a2c832-5dd6-4953-a409-024ee5f83361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ch03/ex12.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch04/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch04/ex01.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch03/ex06.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/ex06.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch03/ex11.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/ex11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex02.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/ex02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex03.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/ex03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex07.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/ex07.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex08.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/ex08.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch03/review.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/review.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +39,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.ex12">
-    <configuration name="ex01 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.review (1)">
+    <configuration name="ex03" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-dl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -53,7 +52,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ch03/ex01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ch03/ex03.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -62,7 +61,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex08" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex04" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-dl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -74,7 +73,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ch03/ex08.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ch03/ex04.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.review (1)" />
+        <item itemvalue="Python.ex04" />
+        <item itemvalue="Python.ex03" />
         <item itemvalue="Python.ex12" />
         <item itemvalue="Python.ex11" />
-        <item itemvalue="Python.ex08" />
-        <item itemvalue="Python.review (1)" />
-        <item itemvalue="Python.ex01 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -190,38 +189,50 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="441" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1577408382626" />
-    <state width="1417" height="163" key="GridCell.Tab.0.bottom" timestamp="1577413594687">
+    <state width="1417" height="163" key="GridCell.Tab.0.bottom" timestamp="1577516402057">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1417" height="163" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1577413594687" />
+    <state width="1417" height="163" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1577516402057" />
     <state width="1897" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1577100049616" />
-    <state width="1417" height="163" key="GridCell.Tab.0.center" timestamp="1577413594686">
+    <state width="1417" height="163" key="GridCell.Tab.0.center" timestamp="1577516402055">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1417" height="163" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1577413594686" />
+    <state width="1417" height="163" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1577516402055" />
     <state width="1897" height="321" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1577100049616" />
-    <state width="1417" height="163" key="GridCell.Tab.0.left" timestamp="1577413594685">
+    <state width="1417" height="163" key="GridCell.Tab.0.left" timestamp="1577516402054">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1417" height="163" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1577413594685" />
+    <state width="1417" height="163" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1577516402054" />
     <state width="1897" height="321" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1577100049616" />
-    <state width="1417" height="163" key="GridCell.Tab.0.right" timestamp="1577413594687">
+    <state width="1417" height="163" key="GridCell.Tab.0.right" timestamp="1577516402056">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1417" height="163" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1577413594687" />
+    <state width="1417" height="163" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1577516402056" />
     <state width="1897" height="321" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1577100049616" />
     <state x="220" y="89" key="SettingsEditor" timestamp="1577285858046">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="220" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1577285858046" />
-    <state x="395" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1577411772951">
+    <state x="395" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1577439394281">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="395" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1577411772951" />
+    <state x="395" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1577439394281" />
     <state x="395" y="281" key="com.intellij.ide.util.TipDialog/0.23.1440.822@0.23.1440.822" timestamp="1577359623713" />
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1577063343221">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="467" y="198" width="672" height="527" key="search.everywhere.popup" timestamp="1577447118406">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="467" y="198" width="672" height="527" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1577447118406" />
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1577063343221" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ch03/ex11.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
