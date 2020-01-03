@@ -1,7 +1,7 @@
 """
 손실함수의 종류
-- 평균 제곱 오차 (MSE)
-- 교차 엔트로피 (Cross Entropy)
+- 평균 제곱 오차 (MSE) - 회귀문제(미래의 숫자(수치)를 예측)
+- 교차 엔트로피 (Cross Entropy) - 실제값과 예측값의 분포를 확인
 
 - 교차 엔트로피 (Cross Entropy)
 실제값과 오차값을 교차시켜 만든다.
@@ -10,7 +10,11 @@ Entropy = - (true_value) * log (expected_value) 의 합
 E = - sum_{i} (true_value_i) * log (expected_value_i)
 
 조건 ) one_hot_encoding 이 되어있는 경우
-의미 ) 데이터 1개에 대해서
+의미 ) 데이터 1개에 대해
+
+교차 엔트로피의 gradient 를 계산하여 + -> - 방향으로 살짝 변화시키기
+교차 엔트로피의 gradient 를 계산하여 - -> + 방향으로 살짝 변화시키기
+
 """
 import pickle
 import numpy as np
@@ -19,23 +23,27 @@ from lab_dl.dataset.mnist import load_mnist
 
 
 def _cross_entropy(y_pred, y_true):
-    delta = 1e-7
-    return -np.sum(y_true * np.log(y_pred + delta))
+    # y_pred, y_true 1차원 배열이라고 가정
+    delta = 1e-7  # log0 = -inf 가 되는 것 방지하기 위해 더해줄 값
+    return -np.sum(y_true * np.log(y_pred + delta))  # 값 1 개 : np.sum()
     # np.log(y_pred + delta) -> broadcasting 으로 delta 복붙해서 더하기, log 각각 씌워짐
     # (y_true * np.log(y_pred + delta)) -> 원소끼리 곱
     # row 하나씩 넣지 않아도, 즉, 10*10행렬 들어가도 됨
 
 
 def cross_entropy(y_pred, y_true):
+    # 1차원, 2차원일 때 모두 고려
     if y_pred.ndim == 1:  # data 갯수 1개
         ce = _cross_entropy(y_pred, y_true)
     elif y_pred.ndim == 2:
         ce = _cross_entropy(y_pred, y_true) / len(y_pred)  # .shape[0]: row 의 갯수 (2차원 배열에서의 row) = len(y_pred)
     return ce
 
+
 """
 _cross_entropy 를 써서 cross_entropy 의 차원에 따라 계산 다르게 함
 """
+
 
 def one_hot_encoding(y_true, y_index):
     pass
