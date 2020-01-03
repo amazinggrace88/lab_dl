@@ -184,3 +184,5 @@ if __name__ == '__main__':
                 neural_net.params[key] -= lr * gradients[key]
 
     # 10번만 해도 시간이 엄청 오래 걸린다..
+    # chain rule - 미분의 연쇄법칙 = 역전파(backpropagation)
+    # f(x) = x**n 이면,  df/dx = nx**(n-1)
