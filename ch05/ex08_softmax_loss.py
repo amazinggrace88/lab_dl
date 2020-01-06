@@ -5,6 +5,7 @@ from lab_dl.ch03.ex11 import softmax
 from lab_dl.ch04.ex03 import cross_entropy
 import numpy as np
 
+
 class SoftmaxWithLoss:
     def __init__(self):
         self.y_true = None  # 정답 레이블을 저장하기 위한 field(변수), one-hot-encoding 가정
@@ -21,8 +22,8 @@ class SoftmaxWithLoss:
         if self.y_true.ndim == 1:
             n = 1
         else:
-            n = self.y_true.shape[0]  # y_true 의 row 의 갯수 - 1 차원일 때는  
-        dx = (self.y_pred - self.y_true) / n  # 평균
+            n = self.y_true.shape[0]  # y_true 의 row 의 갯수 - 1 차원일 때
+        dx = (self.y_pred - self.y_true) / n  # error 들의 평균 (수학적 증명 이해 필요)
         return dx
 
 
