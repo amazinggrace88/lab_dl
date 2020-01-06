@@ -16,9 +16,9 @@ class Relu:
 
     def backward(self, dout):
         # print('masking 전:', dout)
-        dout[self.mask] = 0
+        dout[self.mask] = 0  # forward 할 때 x<=0인 것을 저장하였기 때문에
         # print('masking 후:', dout)
-        dx = dout
+        dx = dout  # 들어온 값을 그대로 내보낸다
         return dx
 
 

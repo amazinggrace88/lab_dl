@@ -5,11 +5,11 @@ import numpy as np
 
 class Affine:
     def __init__(self, W, b):
-        self.W = W  # weight matrix
-        self.b = b  # bias matrix
-        self.X = None  # 입력 행렬을 저장할 field(변수)
-        self.dW = None  # W 행렬 gradient -> W = W - lr * dW 에 사용됨
-        self.db = None  # b 행렬 gradient -> b = b - lr * db 에 사용됨
+        self.W = W  # weight matrix - 행렬 미리 있어야 함
+        self.b = b  # bias matrix - 행렬 미리 있어야 함
+        self.X = None  # 입력 행렬을 저장할 field(변수) for backward
+        self.dW = None  # W 행렬 gradient -> W = W - lr * dW 에 사용됨 for backward
+        self.db = None  # b 행렬 gradient -> b = b - lr * db 에 사용됨 for backward
         
     def forward(self, X):
         self.X = X  # backward 할 때 X 를 기억할 수 있도록 저장하자
@@ -22,8 +22,8 @@ class Affine:
         # b 행렬 방향으로의 gradient 있어야 함
         self.db = np.sum(dout, axis=0)  # 전파된 dout 에서 column 끼리 더한다.
         # z 행렬 방향으로의 gradient -> 1) W 방향 2) X 방향으로 나뉨
-        self.dW = X.T.dot(dout)
-        dX = dout.dot(W.T)
+        self.dW = self.X.T.dot(dout)
+        dX = dout.dot(self.W.T)
 
         return dX
         
