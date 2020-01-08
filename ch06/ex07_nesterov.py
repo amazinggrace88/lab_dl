@@ -1,7 +1,7 @@
 """
 파라미터 최적화 알고리즘
-5) nesterov
-1. nesterov 개념 설명
+5) Nesterov
+1. Nesterov 개념 설명
 Momentum : v 라는 상수가 있어
            v_1 = m * v_0 - lr * dL/dW
            W_1 = W_0 + v_1
@@ -37,8 +37,7 @@ class Nesterov:
             # v = m * v - lr * dL/dW
             self.v[key] = self.m * self.v[key] - self.lr * gradients[key]
             # W_1 = W_0 + m * v_1 - lr * dL/dW
-            # W_1 = W_0 + m ** 2 * v_0 - (1 + m) * lr * dL/dW..??
-            params[key] += self.m * self.m * self.v[key] - self.lr * gradients[key]
+            params[key] += self.m * self.v[key] - self.lr * gradients[key]
 
 
 if __name__ == '__main__':
@@ -61,7 +60,6 @@ if __name__ == '__main__':
     # 점의 이동 방향 보기
     for x, y in zip(x_history, y_history):
         print(f'{x}, {y}')
-
 
     # contour 그래프에 파라미터 갱신 값 그래프 추가
     x = np.linspace(-10, 10, 2000)
