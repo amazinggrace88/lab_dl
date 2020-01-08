@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
             # 수정된 gradient 를 사용하여 가중치/편향 행렬들을 수정
             for key in neural_net.params:
-                neural_net.params[key] -= learning_rate * gradients[key]
+                neural_net.params[key] -= learning_rate * gradients[key]  # SGD.update 메소드와 같은 형태
 
         # 각 epoch 마다 테스트 데이터로 테스트를 해서 accuracy 를 계산
         # 학습 완료된 loss 리턴

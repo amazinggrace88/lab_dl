@@ -36,7 +36,7 @@ class Momentum:
             # 속도 v, 파라미터 params 를 갱신(update)하는 기능
             for key in params:
                 # v = m * v - lr * dL/dW
-                # self.v[key] = self.m * self.v[key] - self.lr * gradients
+                # self.v[key] = self.m * self.v[key] - self.lr * gradients[key]
                 self.v[key] *= self.m
                 self.v[key] -= self.lr * gradients[key]
                 # W = W + v
