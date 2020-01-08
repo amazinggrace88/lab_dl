@@ -2,16 +2,20 @@
 파라미터 최적화 알고리즘
 3) AdaGrad (Adaptive Gradient)
 basic - SGD : W = W - lr * grad 에서는 학습률이 고정되어 있음
-학습률을 계속 바꿔주면서 gradient 를 찾으면 어떨까? -> AdaGrad 의 출발점
+학습률을 계속 자동으로 바꿔주면서 gradient 를 찾으면 어떨까? -> AdaGrad 의 출발점
 
 학습률을 변화시키면서 파라미터를 최적화함
 ** 학습률 변화시키는 방법 ** 
 h 변수 도입
 : 처음에는 큰 학습률로 시작, 반복할 때마다 학습률을 줄여나가면서 파라미터를 갱신한다.
 
-h = h + grad * grad
+h = h + grad * grad - grad 제곱 더해주므로 계속 커진다.
 new_lr = lr / sqrt(h) - 반복할 때마다 lr 가 점점 더 작아진다.
 W = W - (lr/sqrt(h) - new_lr) * grad
+
+단점
+반복할 때마다 h가 커지므로
+분모가 커질수록 (lr/sqrt(h) - new_lr) 이 0이 되므로 파라미터 W 가 갱신이 약해진다.
 """
 import matplotlib.pyplot as plt
 import numpy as np
@@ -31,7 +35,6 @@ class AdaGrad:
                 self.h[key] += gradients[key] * gradients[key]  # element 별 제곱 (dot 이 아니다!)
                 epsilon = 1e-8  # 0으로 나누는 것을 방지하기 위해서
                 params[key] -= (self.lr / np.sqrt(self.h[key] + epsilon)) * gradients[key]
-
 
 
 if __name__ == '__main__':
