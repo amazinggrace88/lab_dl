@@ -21,4 +21,48 @@ beta : 정규화된 mini-batch 를 이동시킴(bias 역할)
 
 cf. nowadays 신경망에서 표준처럼 사용되고 있다.
 """
+from lab_dl.ch06.ex02_sgd import Sgd
+from lab_dl.common.multi_layer_net_extend import MultiLayerNetExtend
+from lab_dl.dataset.mnist import load_mnist
+import matplotlib.pyplot as plt
+
+# p.213 그림 6-18 을 그리세요.
+# Batch-Normalization 을 사용하는 신경망과 사용하지 않는 신경망의 학습 속도 비교하기
+
+# MNIST data
+(X_train, Y_train), (X_test, Y_test) = load_mnist(one_hot_label=True)
+
+# Batch-Normalization 을 사용하는 신경망
+bn_neural_net = MultiLayerNetExtend(input_size=784, 
+                                    hidden_size_list=[100, 100, 100, 100, 100], 
+                                    output_size=10, 
+                                    weight_init_std=0.01, 
+                                    use_batchnorm=True)
+
+# Batch-Normalization 을 사용하지 않는 신경망
+neural_net = MultiLayerNetExtend(input_size=784, 
+                                 hidden_size_list=[100, 100, 100, 100, 100], 
+                                 output_size=10, 
+                                 weight_init_std=0.01, 
+                                 use_batchnorm=False)
+
+# mini-batch 20 번 학습시키면서 두 신경망에서 정확도(accuarcy)를 기록
+
+mini_batch = 20
+train_losses = []
+
+for i in range(mini_batch):
+    gradients = bn_neural_net.gradient(X_train[mini_batch], Y_train[mini_batch])
+    params = bn_neural_net.params
+    optimizer.update(params, gradients)
+    loss = bn_neural_net.loss()
+    train_losses.append(loss)
+
+# 그래프 그리기
+plt.plot(X_batch, train_losses)
+plt.show()
+
+
+
+
 

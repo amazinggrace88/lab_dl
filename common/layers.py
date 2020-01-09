@@ -155,7 +155,7 @@ class BatchNormalization:
             std = np.sqrt(var + 10e-7)  # 표준편차 계산 + 10e-7 분모가 0이 되지 않도록 작은 값 더해준다.
             xn = xc / std  # 분자 / 분모
             
-            self.batch_size = x.shape[0]
+            self.batch_size = x.shape[0]  # back propagation 에서 사용될 것이기 때문에 저장해준다.
             self.xc = xc
             self.xn = xn
             self.std = std
@@ -179,8 +179,8 @@ class BatchNormalization:
         return dx
 
     def __backward(self, dout):
-        dbeta = dout.sum(axis=0)
-        dgamma = np.sum(self.xn * dout, axis=0)
+        dbeta = dout.sum(axis=0)  # dbeta
+        dgamma = np.sum(self.xn * dout, axis=0)  # dgamma
         dxn = self.gamma * dout
         dxc = dxn / self.std
         dstd = -np.sum((dxn * self.xc) / (self.std * self.std), axis=0)
