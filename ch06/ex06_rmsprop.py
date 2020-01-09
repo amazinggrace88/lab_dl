@@ -22,7 +22,7 @@ import numpy as np
 from lab_dl.ch06.ex01_matplot3d import fn, fn_derivative
 
 class RMSProp:
-    def __init__(self, lr=0.01, rho=0.1):
+    def __init__(self, lr: object = 0.01, rho: object = 0.1) -> object:
         self.lr = lr
         self.rho = rho
         self.h = dict()

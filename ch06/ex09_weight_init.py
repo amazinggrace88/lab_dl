@@ -35,6 +35,7 @@ if __name__ == '__main__':
     y_sig = sigmoid(x)
     y_tanh = tanh(x)
     y_relu = relu(x)
+    plt.title('Activation Function')
     plt.plot(x, y_sig, label='Sigmoid')
     plt.plot(x, y_tanh, label='Hyperbolic Tangent')
     plt.plot(x, y_relu, label='ReLU')
@@ -59,13 +60,34 @@ if __name__ == '__main__':
     hidden_layer_size = 5  # 은닉층 갯수
     activations = dict()  # 데이터가 각 은닉층을 지났을 때 출력되는 값들을 저장
 
-    for i in range(hidden_layer_size):
-        if i != 0:
-            x = activations[i-1]
-        # step 3. 가중치 행렬(W) 생성 - 은닉층마다 생성
-        W = np.random.randn(node_num, node_num)  # shape : (x 의 column 갯수, node_num)
-        # step 4. 은닉층을 지난 결과값 생성
-        a = x.dot(W)
-        z = sigmoid(a)
-        activations[i] = z
+    weight_init_types = {
+        'std=0.01': 0.01,
+        'Xavier': np.sqrt(1 / node_num),
+        'He': np.sqrt(2 / node_num)
+    }
+    input_data = np.random.randn(1_000, 100)
+    for k, v in weight_init_types.items():
+        x = input_data
+        # 입력 데이터 x를 5개의 은닉층을 통과시킴.
+        for i in range(hidden_layer_size):
+            # 은닉층에서 사용하는 가중치 행렬:
+            # 평균 0, 표준편차 1인 정규분포(N(0, 1))를 따르는 난수로 가중치 행렬 생성
+            # w = np.random.randn(node_num, node_num)
+            # w = np.random.randn(node_num, node_num) * 0.01  # N(0, 0.01)
+            # w = np.random.randn(node_num, node_num) * np.sqrt(1/node_num)  # N(0, sqrt(1/n))
+            # w = np.random.randn(node_num, node_num) * np.sqrt(2/node_num)  # N(0, sqrt(2/n))
+            w = np.random.randn(node_num, node_num) * v
+            a = x.dot(w)  # a = x @ w
+            # x = sigmoid(a)  # 활성화 함수 적용 -> 은닉층의 출력(output)
+            # x = tanh(a)
+            x = relu(a)
+            activations[i] = x  # 그래프 그리기 위해서 출력 결과를 저장
+
+        for i, output in activations.items():
+            plt.subplot(1, len(activations), i + 1)
+            # subplot(nrows, ncols, index). 인덱스는 양수(index >= 0).
+            plt.title(f'{i + 1} layer')
+            plt.hist(output.flatten(), bins=30, range=(-1, 1))
+        plt.show()
+
 

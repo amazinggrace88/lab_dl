@@ -135,12 +135,12 @@ class BatchNormalization:
     def forward(self, x, train_flg=True):
         self.input_shape = x.shape
         if x.ndim != 2:
-            N, C, H, W = x.shape
+            N, C, H, W = x.shape  # N minibatch size, C Channel, H Height, W Weight
             x = x.reshape(N, -1)
 
         out = self.__forward(x, train_flg)
         
-        return out.reshape(*self.input_shape)
+        return out.reshape(*self.input_shape)  # 2차원이 아닐 때는 변환하고 계산 후 다시 원래 모양으로 되돌린다.
             
     def __forward(self, x, train_flg):
         if self.running_mean is None:
@@ -149,11 +149,11 @@ class BatchNormalization:
             self.running_var = np.zeros(D)
                         
         if train_flg:
-            mu = x.mean(axis=0)
-            xc = x - mu
-            var = np.mean(xc**2, axis=0)
-            std = np.sqrt(var + 10e-7)
-            xn = xc / std
+            mu = x.mean(axis=0)  # 평균 계산
+            xc = x - mu  # 분자 계산
+            var = np.mean(xc**2, axis=0)  # 분산 계산
+            std = np.sqrt(var + 10e-7)  # 표준편차 계산 + 10e-7 분모가 0이 되지 않도록 작은 값 더해준다.
+            xn = xc / std  # 분자 / 분모
             
             self.batch_size = x.shape[0]
             self.xc = xc
@@ -165,7 +165,7 @@ class BatchNormalization:
             xc = x - self.running_mean
             xn = xc / ((np.sqrt(self.running_var + 10e-7)))
             
-        out = self.gamma * xn + self.beta 
+        out = self.gamma * xn + self.beta  # y = gamma * xn + beta
         return out
 
     def backward(self, dout):
