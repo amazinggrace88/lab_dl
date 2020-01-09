@@ -61,7 +61,7 @@ if __name__ == '__main__':
             # 각각의 최적화 알고리즘을 사용해서 gradient 구하기
             gradients = neural_nets[key].gradient(X_batch, Y_batch)
             # gradient 이용하여 파라미터 업데이트
-            optimizers[key].update(neural_nets[key].params, gradients)
+            optimizers[key].update(neural_nets[key].params, gradients)  # W = W - lr * dL/dW 처럼 gradient를 통해 parameter 업데이트
             # optimizer 별로 loss 계산
             loss = neural_nets[key].loss(X_batch, Y_batch)
             train_losses[key].append(loss)  # {'Sgd': [..], 'Momentum': [..] .. } 형태

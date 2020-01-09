@@ -30,11 +30,10 @@ class AdaGrad:
         if not self.h:
             for key in params:
                 self.h[key] = np.zeros_like(params[key])
-        else:
-            for key in params:
-                self.h[key] += gradients[key] * gradients[key]  # element 별 제곱 (dot 이 아니다!)
-                epsilon = 1e-8  # 0으로 나누는 것을 방지하기 위해서
-                params[key] -= (self.lr / np.sqrt(self.h[key] + epsilon)) * gradients[key]
+        for key in params:
+            self.h[key] += gradients[key] * gradients[key]  # element 별 제곱 (dot 이 아니다!)
+            epsilon = 1e-8  # 0으로 나누는 것을 방지하기 위해서
+            params[key] -= (self.lr / np.sqrt(self.h[key] + epsilon)) * gradients[key]
 
 
 if __name__ == '__main__':

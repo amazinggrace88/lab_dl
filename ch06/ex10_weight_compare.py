@@ -69,16 +69,6 @@ for name, value in optimizer.items():
             for key, val in train_losses.items():
                 print(key, ':', train_losses[key][-1])
 
-# x축-반복 회수, y축-손실 그래프
-x = np.arange(iterations)
-for key, losses in train_losses.items():
-    plt.plot(x, losses, labels=key)
-plt.title('weight init compare')
-plt.xlabel('# of training : iteration')
-plt.ylabel('loss')
-plt.legend()
-plt.show()
-
 
 # optimizer 1개 일 때 : Sgd
 optimizer = Sgd()
@@ -96,7 +86,7 @@ for i in range(iterations):
         # 손실(loss) 계산 -> 리스트 추가
         loss = net.loss(X_batch, Y_batch)
         train_losses[key].append(loss)
-    if i % 100 == 0:
+    if i % 1000 == 0:
         print(f'===== iteration #{i} =====')
         for key, loss_list in train_losses.items():
             print(key, ':', loss_list[-1])

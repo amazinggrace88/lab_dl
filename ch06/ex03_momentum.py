@@ -32,15 +32,15 @@ class Momentum:
             for key in params:
                 # 파라미터(W, b등)와 동일한 shape 의 0으로 채워진 배열 생성
                 self.v[key] = np.zeros_like(params[key])
-        else:
-            # 속도 v, 파라미터 params 를 갱신(update)하는 기능
-            for key in params:
-                # v = m * v - lr * dL/dW
-                # self.v[key] = self.m * self.v[key] - self.lr * gradients[key]
-                self.v[key] *= self.m
-                self.v[key] -= self.lr * gradients[key]
-                # W = W + v
-                params[key] += self.v[key]
+
+        # 속도 v, 파라미터 params 를 갱신(update)하는 기능
+        for key in params:
+            # v = m * v - lr * dL/dW
+            # self.v[key] = self.m * self.v[key] - self.lr * gradients[key]
+            self.v[key] *= self.m
+            self.v[key] -= self.lr * gradients[key]
+            # W = W + v
+            params[key] += self.v[key]
 
 
 if __name__ == '__main__':
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     # contour 그래프에 파라미터 갱신 값 그래프 추가
     x = np.linspace(-10, 10, 2000)
     y = np.linspace(-5, 5, 1000)
-    X, Y = np.meshgrid(x, y)
+    X, Y = np.meshgrid(x, y)  # ???
     Z = fn(X, Y)
 
     mask = Z > 7
