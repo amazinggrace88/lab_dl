@@ -23,7 +23,10 @@ weight_init_types = {
 neural_nets = dict()
 train_losses = dict()
 for key, type in weight_init_types.items():
-    neural_nets[key] = MultiLayerNet(input_size=784, hidden_size_list=[100, 100, 100, 100], output_size=10, weight_init_std=type)
+    neural_nets[key] = MultiLayerNet(input_size=784,
+                                     hidden_size_list=[100, 100, 100, 100],
+                                     output_size=10,
+                                     weight_init_std=type)
     # layer 4개(뉴런 갯수 100개씩)인 완전연결 다층 신경망.  weight_init_std=type 으로 값을 지정한다.
     train_losses[key] = []  # 빈 리스트 생성 - 실험(학습)하면서 손실값들을 저장
 
@@ -39,8 +42,8 @@ optimizer = {
     'Momentum': Momentum(),
     'Adagrad': AdaGrad(),
     'Adam': Adam(),
-    'RMSProp': RMSProp()
-    # 'Nesterov': Nesterov()
+    'RMSProp': RMSProp(),
+    'Nesterov': Nesterov()
 }
 
 # 2,000번 반복

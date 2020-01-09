@@ -12,7 +12,6 @@ weight(가중치) 의 초기값을 모두 0 또는 균일한 값으로 정하면
 weight(가중치) 의 초기값은 보통 정규 분포를 따르는 난수를 랜덤하게 추출해서 만듦.
 그런데 정규분포의 표준편차에 따라 학습 성능이 달라진다. why? 표준편차가 활성화 함수에 따라 또한 변화하기 때문
 
-** Solution **
 1) weight 행렬의 초깃값을 N(0, 1) 분포를 따르는 난수로 생성하면
 활성화 함수를 지나는 값(즉, 활성화값)들이 0 과 1 주위에 치우쳐서 분포하게 된다.
 - why? 각 층의 활성화값들이 0과 1에 치우쳐 분포되므로 여기서 사용한 시그모이드 함수는 출력이 0, 1 에 가까워지면 그 미분은 0에 다가간다.
@@ -73,8 +72,10 @@ if __name__ == '__main__':
     그래프 해석
     hyperbolic tangent : -1 ~ 1 범위에서 작동, 0 이상인 양수에서 양수가 된다.
     """
-    # Weight 를 임의의 양수, 정규분포로 만들고, 활성화 함수에 따라 값이 어떻게 변하는지 관찰
 
+    """
+    Weight 를 임의의 양수, 정규분포로 만들고, 활성화 함수에 따라 값이 어떻게 변하는지 관찰
+    """
     # step 1. 가상의 신경망에서 사용할 테스트 데이터를 생성
     np.random.seed(108)
     x = np.random.randn(1000, 100)  # 정규화된 mini-batch
@@ -82,13 +83,13 @@ if __name__ == '__main__':
     node_num = 100  # 은닉층의 노드(뉴런) 갯수
     hidden_layer_size = 5  # 은닉층 갯수
     activations = dict()  # 데이터가 각 은닉층을 지났을 때 출력되는 값들을 저장
-
     weight_init_types = {
         'std=0.01': 0.01,
         'Xavier': np.sqrt(1 / node_num),
         'He': np.sqrt(2 / node_num)
     }
     input_data = np.random.randn(1_000, 100)
+
     for k, v in weight_init_types.items():
         x = input_data
         # 입력 데이터 x를 5개의 은닉층을 통과시킴.
