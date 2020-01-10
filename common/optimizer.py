@@ -25,7 +25,7 @@ class Momentum:
     def update(self, params, grads):
         if self.v is None:
             self.v = {}
-            for key, val in params.items():                                
+            for key, val in params.items():   # 속도를 만들어 내는 방향 - ??? 질문하기.
                 self.v[key] = np.zeros_like(val)
                 
         for key in params.keys():

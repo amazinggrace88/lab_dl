@@ -176,7 +176,7 @@ class BatchNormalization:
         dx = self.__backward(dout)
 
         dx = dx.reshape(*self.input_shape)
-        return dx
+        return dx  # 이전 계층으로 보내주는 gradient!
 
     def __backward(self, dout):
         dbeta = dout.sum(axis=0)  # dbeta
