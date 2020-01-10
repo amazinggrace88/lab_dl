@@ -98,14 +98,14 @@ class Dropout:
     """
     def __init__(self, dropout_ratio=0.5):  # 50% 를 drop out 하겠다는 의미
         self.dropout_ratio = dropout_ratio
-        self.mask = None  # 배열 중 몇 개를 뽑아낼 때
+        self.mask = None  # 배열 중 몇 개를 뽑아낼 때 mask - (T, F ..) 를 사용한다.
 
-    def forward(self, x, train_flg=True):
+    def forward(self, x, train_flg=True):  # train_flg : 학습중인지 알려주는 파라미터
         if train_flg:
-            self.mask = np.random.rand(*x.shape) > self.dropout_ratio
-            return x * self.mask
+            self.mask = np.random.rand(*x.shape) > self.dropout_ratio  # ratio 보다 큰 숫자만 mask
+            return x * self.mask  # 숫자 * (true - 1, false - 0)
         else:
-            return x * (1.0 - self.dropout_ratio)
+            return x * (1.0 - self.dropout_ratio)  # 원래 출력값 * (1-dropout ratio)
 
     def backward(self, dout):
         return dout * self.mask
