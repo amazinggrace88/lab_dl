@@ -89,9 +89,9 @@ class MultiLayerNet:
         weight_decay = 0
         for idx in range(1, self.hidden_layer_num + 2):
             W = self.params['W' + str(idx)]
-            weight_decay += 0.5 * self.weight_decay_lambda * np.sum(W ** 2)
+            weight_decay += 0.5 * self.weight_decay_lambda * np.sum(W ** 2)  # lambda(Λ) * (1/2)||W||**2 거리의 제곱
 
-        return self.last_layer.forward(y, t) + weight_decay
+        return self.last_layer.forward(y, t) + weight_decay  # last_layer - cross entropy with loss 즉 L
 
     def accuracy(self, x, t):
         y = self.predict(x)
@@ -153,7 +153,7 @@ class MultiLayerNet:
         # 결과 저장
         grads = {}
         for idx in range(1, self.hidden_layer_num+2):
-            grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * self.layers['Affine' + str(idx)].W
+            grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * self.layers['Affine' + str(idx)].W  # lambda(Λ) * (1/2)||W||**2
             grads['b' + str(idx)] = self.layers['Affine' + str(idx)].db
 
         return grads

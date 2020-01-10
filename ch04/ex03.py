@@ -10,7 +10,7 @@ Entropy = - (true_value) * log (expected_value) 의 합
 E = - sum_{i} (true_value_i) * log (expected_value_i)
 
 조건 ) one_hot_encoding 이 되어있는 경우
-의미 ) 데이터 1개에 대해
+의미 ) 데이터 1개에 대해 [1,
 
 교차 엔트로피의 gradient 를 계산하여 + -> - 방향으로 살짝 변화시키기
 교차 엔트로피의 gradient 를 계산하여 - -> + 방향으로 살짝 변화시키기

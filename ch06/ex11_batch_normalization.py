@@ -39,14 +39,14 @@ np.random.seed(110)
 bn_neural_net = MultiLayerNetExtend(input_size=784, 
                                     hidden_size_list=[100, 100, 100, 100, 100], 
                                     output_size=10, 
-                                    weight_init_std=0.01, 
+                                    weight_init_std=0.3,
                                     use_batchnorm=True)
 
 # Batch-Normalization 을 사용하지 않는 신경망
 neural_net = MultiLayerNetExtend(input_size=784, 
                                  hidden_size_list=[100, 100, 100, 100, 100], 
                                  output_size=10, 
-                                 weight_init_std=0.01, 
+                                 weight_init_std=0.3,
                                  use_batchnorm=False)
 
 # mini-batch 20 번 학습시키면서 두 신경망에서 정확도(accuarcy)를 기록
@@ -80,7 +80,7 @@ for i in range(iterations):
     # 배치 정규화를 사용하지 않는 신경망에서 gradient를 계산.
     gradients = neural_net.gradient(x_batch, y_batch)
     # 파라미터 업데이트(갱신) - W(가중치), b(편향)을 업데이트
-    bn_optimizer.update(neural_net.params, gradients)  # neural_net.params 은 W, b만을 넘기고 있다. momentum 은 감마, 베타도 필요..
+    optimizer.update(neural_net.params, gradients)  # neural_net.params 은 W, b만을 넘기고 있다. momentum 은 감마, 베타도 필요..
     # 업데이트된 파라미터들을 사용해서 배치 데이터의 정확도 계산
     acc = neural_net.accuracy(x_batch, y_batch)
     # 정확도를 기록
@@ -88,7 +88,7 @@ for i in range(iterations):
 
     # 배치 정규화를 사용하는 신경망에서 같은 작업을 수행.
     bn_gradients = bn_neural_net.gradient(x_batch, y_batch)  # gradient 계산
-    optimizer.update(bn_neural_net.params, bn_gradients)  # W, b 업데이트
+    bn_optimizer.update(bn_neural_net.params, bn_gradients)  # W, b 업데이트
     bn_acc = bn_neural_net.accuracy(x_batch, y_batch)  # 정확도 계산
     bn_train_accuracies.append(bn_acc)  # 정확도 기록
 

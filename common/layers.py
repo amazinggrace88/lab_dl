@@ -96,9 +96,9 @@ class Dropout:
     """
     http://arxiv.org/abs/1207.0580
     """
-    def __init__(self, dropout_ratio=0.5):
+    def __init__(self, dropout_ratio=0.5):  # 50% 를 drop out 하겠다는 의미
         self.dropout_ratio = dropout_ratio
-        self.mask = None
+        self.mask = None  # 배열 중 몇 개를 뽑아낼 때
 
     def forward(self, x, train_flg=True):
         if train_flg:
