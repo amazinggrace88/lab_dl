@@ -7,7 +7,7 @@ cf. 합성곱과 교차상관은 매우 비슷하다. (대칭적)
 import numpy as np
 
 
-def my_convolution_1d(x, w):
+def convolution_1d(x, w):
     """
     # x와 w의 Convolution (합성곱 연산) 결과를 리턴
     x, w : 1d ndarray
@@ -21,32 +21,37 @@ def my_convolution_1d(x, w):
         ex) 5 - 2 + 1 = 4
         ex) 5 - 3 + 1 = 3
     """
-    if len(x) >= len(w):
-        w_r = np.flip(w)
-        conv = []
-        for i in range(len(x) - len(w_r) + 1):
-            x_sub = x[i:i + len(w)]
-            fma = x_sub.dot(w_r)
-            conv.append(fma)
-        conv = np.array(conv)
-    else:
-        print('합성곱을 할 수 없습니다')
+    w_r = np.flip(w)  # w 반전
+    conv = cross_correlation_1d(x, w_r)
     return conv
 
 
-# 오쌤 정답
-def convolution_1d(x, w):
-    w_r = np.flip(w)  # w 반전
-    nx = len(x)
+def cross_correlation_1d(x, w):
+    """
+    x, w : 1d ndarray
+    len(x) >= len(w)
+    x 와 w 의 교차상관 연산 결과 리턴
+    convolution_1d() 함수가 cross_correlation_1d() 를 사용하도록 수정
+
+    <교차상관(Cross-Correlation) 연산>
+    합성곱 연산과 다른 점 : w 를 반전시키지 않는다
+    교차상관과 합성곱이 차이가 나지 않는 이유 - w라는 행렬을 난수로 만들어내어 forward, backward 하기 때문에
+                                        반전시킨 것을 난수로 사용한다고 이해할 수 있다.
+    CNN(Convolutional Neural Network, 합성곱 신경망)에서는 대부분의 경우 교차상관을 사용함
+    """
+    nx = len(x)  # 지정
     nw = len(w)
     n = nx - nw + 1
     conv = []
-    for i in range(n):
-        x_sub = x[i:i + nw]
-        fma = np.sum(x_sub * w_r)
-        conv.append(fma)
-    conv = np.array(conv)
-    return conv
+    if nx >= nw:
+        for i in range(n):
+            x_sub = x[i:i + nw]
+            fma = np.sum(x_sub * w)
+            conv.append(fma)
+        conv = np.array(conv)
+        return conv
+    else:
+        print('합성곱을 할 수 없습니다')
 
 
 if __name__ == '__main__':
@@ -82,8 +87,6 @@ if __name__ == '__main__':
         print('합성곱을 할 수 없습니다')
 
     # def 실험
-    result = my_convolution_1d(x, w)
-    print('my convolution function = ', result)
     result = convolution_1d(x, w)
     print('convolution function = ', result)
     x = np.arange(1, 6)
@@ -91,11 +94,3 @@ if __name__ == '__main__':
     result = convolution_1d(x, w)
     print('convolution function = ', result)
 
-    """
-    교차상관(Cross-Correlation) 연산
-    합성곱 연산과 다른 점 : w 를 반전시키지 않는다
-    교차상관과 합성곱이 차이가 나지 않는 이유 - w라는 행렬을 난수로 만들어내어 forward, backward 하기 때문에 
-                                        반전시킨 것을 난수로 사용한다고 이해할 수 있다.
-    CNN(Convolutional Neural Network, 합성곱 신경망)에서는 대부분의 경우 교차상관을 사용함
-    """
-    
