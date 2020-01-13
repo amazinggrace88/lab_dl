@@ -2,8 +2,233 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3a2c832-5dd6-4953-a409-024ee5f83361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ch05/review.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch01_review/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch01_review/ex01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch02/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch02/ex01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch02/ex02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch02/review.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/array.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/christmas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/data.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex04.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex05.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex06.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex07.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex08.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex09.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex09_pangsoo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/ex12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/review.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/sample_weight.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/test1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch03/test2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex04.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex05.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex06.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex07.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex08.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex09.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex10_nditer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/ex11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch04/review.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/cf_partial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex01_basic_layer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex02_layer_practice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex04_sigmoid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex04_sigmoid_answer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex05_relu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex06_dot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex07_affine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex08_softmax_loss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex09.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex10_twolayer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/ex12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/params.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch05/review.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex01_matplot3d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex02_sgd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex03_momentum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex04_adagrad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex05_adam.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex06_rmsprop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex07_nesterov.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex08_compare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex09_weight_init.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex10_weight_compare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex11_batch_normalization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex12_weight_decay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/ex13_dropout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/optimizer_compare_mnist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06/review.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/batch_norm_gradient_check.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/batch_norm_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/hyperparameter_optimization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/optimizer_compare_mnist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/optimizer_compare_naive.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/overfit_dropout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/overfit_weight_decay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/weight_init_activation_histogram.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch06_rawcode/weight_init_compare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch07/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch07/dubai.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch07/ex01_convolution1d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch07/ex02_convolution2d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch07/ex03_padding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch07/ex04_conv_pad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/ch07/ex05_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/common/functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/common/gradient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/common/layers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/common/multi_layer_net.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/common/multi_layer_net_extend.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/common/optimizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/common/trainer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/common/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/dataset/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/dataset/mnist.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/dataset/mnist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/dataset/t10k-images-idx3-ubyte.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/dataset/t10k-labels-idx1-ubyte.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/dataset/train-images-idx3-ubyte.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/dataset/train-labels-idx1-ubyte.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/venv/Scripts/Activate.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/venv/Scripts/activate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/venv/Scripts/activate.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/venv/Scripts/deactivate.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/venv/Scripts/python.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/venv/Scripts/pythonw.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_dl/venv/pyvenv.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01_review/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01_review/ex01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/ex01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/ex02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/review.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/array.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/christmas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/data.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex03.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex04.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex05.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex06.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex07.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex08.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex09.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex09_pangsoo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex10.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/ex12.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/review.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/sample_weight.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/test1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch03/test2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex03.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex04.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex05.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex06.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex07.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex08.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex09.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex10_nditer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/ex11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/review.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/cf_partial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex01_basic_layer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex02_layer_practice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex03.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex04_sigmoid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex04_sigmoid_answer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex05_relu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex06_dot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex07_affine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex08_softmax_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex09.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex10_twolayer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/ex12.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/params.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/review.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex01_matplot3d.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex02_sgd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex03_momentum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex04_adagrad.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex05_adam.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex06_rmsprop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex07_nesterov.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex08_compare.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex09_weight_init.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex10_weight_compare.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex11_batch_normalization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex12_weight_decay.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/ex13_dropout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/optimizer_compare_mnist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/review.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/batch_norm_gradient_check.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/batch_norm_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/hyperparameter_optimization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/optimizer_compare_mnist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/optimizer_compare_naive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/overfit_dropout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/overfit_weight_decay.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/weight_init_activation_histogram.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06_rawcode/weight_init_compare.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/dubai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/ex01_convolution1d.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/ex02_convolution2d.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/ex03_padding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/ex04_conv_pad.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/ex05_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/gradient.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/layers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/multi_layer_net.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/multi_layer_net_extend.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/optimizer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/trainer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/mnist.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/mnist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/t10k-images-idx3-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/t10k-labels-idx1-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/train-images-idx3-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/train-labels-idx1-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/python.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +255,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -176,6 +402,9 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="319" y="114" key="#Inspections" timestamp="1577359881498">
       <screen x="0" y="0" width="1440" height="900" />
@@ -209,10 +438,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="220" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1577285858046" />
-    <state x="395" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1578399255792">
-      <screen x="0" y="23" width="1440" height="822" />
+    <state x="395" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1578714714502">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="395" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1577439394281" />
+    <state x="395" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1578714714502" />
     <state x="395" y="281" key="com.intellij.ide.util.TipDialog/0.23.1440.822@0.23.1440.822" timestamp="1578399255792" />
     <state x="467" y="198" width="672" height="527" key="search.everywhere.popup" timestamp="1577447118406">
       <screen x="0" y="0" width="1440" height="900" />
