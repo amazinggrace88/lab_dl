@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 
-from dataset.mnist import load_mnist
+from lab_dl.lab_dl.dataset.mnist import load_mnist
 
 
 def pooling1d(x, pool_size, stride=1):
