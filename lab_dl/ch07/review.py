@@ -1,15 +1,15 @@
 import numpy as np
 
-def cross_correlation_1d(x, w):
-    """교차상관"""
-    nx = len(x)
-    nw = len(w)
-    n = nx - nw + 1
-    conv = []
-    if nx >= nw:
-        for i in range(n):
-        x_sub = x[i:i + nw]
-        fma = np.sum(x_sub * w)
+from lab_dl.lab_dl.common.util import im2col
 
-    else:
-        print('교차상관을 할 수 없습니다')
+if __name__ == '__main__':
+    np.random.seed(116)
+    x = np.random.randint(10, size=(1, 3, 4, 4))
+    col = im2col(x, 2, 2, 2, 0)
+    col = col.reshape(-1, 2*2)
+    print(col.shape)  # (12, 4)
+    out = np.max(col, axis=1)
+    out = out.reshape(1, 2, 2, 3)
+    out = out.transpose(0, 3, 1, 2)
+    print(out)
+

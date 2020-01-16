@@ -1,7 +1,7 @@
 # coding: utf-8
 import numpy as np
-from lab_dl.common.functions import *
-from lab_dl.common.util import im2col, col2im
+from lab_dl.lab_dl.common.functions import *
+from lab_dl.lab_dl.common.util import im2col, col2im
 
 
 class Relu:
@@ -9,14 +9,14 @@ class Relu:
         self.mask = None
 
     def forward(self, x):
-        self.mask = (x <= 0)
+        self.mask = (x <= 0)  # 0 이 되는 숫자를 mask
         out = x.copy()
         out[self.mask] = 0
 
         return out
 
     def backward(self, dout):
-        dout[self.mask] = 0
+        dout[self.mask] = 0  # mask = 0
         dx = dout
 
         return dx
