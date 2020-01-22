@@ -13,7 +13,7 @@ class SimpleConvNet:
     2st hidden layer : Affine -> Relu
     output layer : Affine -> Softmax with loss
 
-        input_dim: 입력 데이터 차원. MNIST인 경우 (1, 28, 28)
+        input_dim: 입력 데이터 차원. MNIST인 경우 (1, 28, 28) -> 3 차원
         conv_param: Convolution 레이어의 파라미터(filter, bias)를 생성하기 위해
         필요한 값들
             필터 개수(filter_num),
@@ -37,7 +37,7 @@ class SimpleConvNet:
         filter_stride = conv_param['stride']
         input_size = input_dim[1]
         conv_output_size = (input_size - filter_size + 2 * filter_pad) / filter_stride + 1
-        pool_output_size = int(filter_num * (conv_output_size / 2) * (conv_output_size / 2))
+        pool_output_size = int(filter_num * (conv_output_size / 2) * (conv_output_size / 2))  # 사이즈 줄여준다. for Affine2 계층
 
         self.layers = OrderedDict()
         self.layers['Conv1'] = Convolution(self.params['W1'], self.params['b1'], filter_stride, filter_pad)
@@ -67,7 +67,7 @@ class SimpleConvNet:
     def loss(self, x, t):
         """forward 끝에서 softmaxwithloss 지나면서 손실 계산"""
         y = self.predict(x)
-        return self.last_layer.forward(x, t)
+        return self.last_layer.forward(y, t)
 
     def accuracy(self, x, t):
         """accuracy"""
@@ -75,6 +75,7 @@ class SimpleConvNet:
         y = np.argmax(axis=1)
         acc = np.sum(y == t) / float(x.shape[0])
         return acc
+
 
     def gradient(self, x, t):
         """backward 하면서 gradient 를 계산 -> w, b 업데이트"""
@@ -110,4 +111,4 @@ if __name__ == '__main__':
     simpleconvnet = SimpleConvNet()
     # 학습 -> 테스트
     y_pred = simpleconvnet.predict(mini_batch_x_train)
-    print('', y_pred)
+    # print('', y_pred)

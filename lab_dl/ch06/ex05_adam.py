@@ -1,5 +1,5 @@
 """
-파라미터 최적화 알고리즘
+**파라미터 최적화 알고리즘**
 4) adam (Adaptive (gradient) Moment estimate)
 1. adam 개념 설명
 Adagrad + Momentum 이 결합
@@ -27,7 +27,7 @@ W = W - [lr / sqrt(v_hat)] * m_hat
 """
 import numpy as np
 import matplotlib.pyplot as plt
-from lab_dl.ch06.ex01_matplot3d import fn, fn_derivative
+from lab_dl.lab_dl.ch06.ex01_matplot3d import fn, fn_derivative
 
 
 class Adam:
